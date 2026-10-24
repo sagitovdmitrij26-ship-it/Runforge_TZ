@@ -1,0 +1,153 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  background: rgb(16 35 63 / 42%);
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 21;
+  display: flex;
+  flex-direction: column;
+  width: min(480px, 100%);
+  height: 100%;
+  overflow: auto;
+  background: var(--bg-elevated);
+  box-shadow: -16px 0 40px rgb(16 35 63 / 12%);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.back {
+  align-self: flex-start;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--navy);
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.titleRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.title {
+  margin: 0;
+  font-size: 24px;
+}
+
+.body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 24px 28px;
+}
+
+.meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 0;
+}
+
+.metaItem {
+  margin: 0;
+}
+
+.metaLabel {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.metaValue {
+  margin: 0;
+  word-break: break-word;
+}
+
+.sectionTitle {
+  margin: 0 0 10px;
+  font-size: 16px;
+}
+
+.logs {
+  margin: 0;
+  padding: 14px 16px;
+  border-radius: 10px;
+  background: var(--navy);
+  color: #f6f1e8;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.logLine {
+  margin: 0;
+}
+
+.result,
+.empty {
+  margin: 0;
+  padding: 14px 16px;
+  border-radius: 10px;
+  line-height: 1.5;
+}
+
+.result {
+  background: var(--succeeded-bg);
+}
+
+.empty {
+  background: #f3eee4;
+  color: var(--muted);
+}
+
+.center {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 180px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.retry {
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--navy);
+  color: #f6f1e8;
+  cursor: pointer;
+}
+
+@media (max-width: 720px) {
+  .drawer {
+    width: 100%;
+  }
+
+  .meta {
+    grid-template-columns: 1fr;
+  }
+}

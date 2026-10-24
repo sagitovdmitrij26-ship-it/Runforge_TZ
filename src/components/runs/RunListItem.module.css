@@ -1,0 +1,77 @@
+.item {
+  display: grid;
+  width: 100%;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr) auto minmax(0, 1.2fr) 90px;
+  gap: 16px;
+  align-items: center;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-elevated);
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.item:hover,
+.item:focus-visible {
+  border-color: var(--navy);
+}
+
+.item:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 2px;
+}
+
+.name {
+  display: block;
+  margin: 0 0 4px;
+  font-size: 16px;
+  font-weight: 650;
+}
+
+.branch,
+.meta,
+.duration {
+  display: block;
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.repository,
+.created {
+  min-width: 0;
+}
+
+.fieldLabel {
+  display: none;
+  margin: 0 0 4px;
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 720px) {
+  .item {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 16px;
+  }
+
+  .nameBlock {
+    grid-column: 1 / -1;
+  }
+
+  .status {
+    justify-self: start;
+  }
+
+  .duration {
+    text-align: left;
+  }
+
+  .fieldLabel {
+    display: block;
+  }
+}

@@ -1,0 +1,54 @@
+:root {
+  --bg: #f3eee4;
+  --bg-elevated: #fffdf8;
+  --navy: #10233f;
+  --navy-soft: #1b3558;
+  --ink: #162033;
+  --muted: #5d6b7c;
+  --line: #e3dccf;
+  --live: #2f8f6b;
+  --queued: #8a6a2f;
+  --queued-bg: #f4ead3;
+  --running: #1d4e89;
+  --running-bg: #dce8f5;
+  --succeeded: #2f8f6b;
+  --succeeded-bg: #dceee4;
+  --failed: #9b2f3a;
+  --failed-bg: #f6dfe1;
+  --space: 16px;
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--bg);
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

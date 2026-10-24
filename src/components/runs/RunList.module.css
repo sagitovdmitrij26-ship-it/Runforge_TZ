@@ -1,0 +1,26 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr) auto minmax(0, 1.2fr) 90px;
+  gap: 16px;
+  padding: 0 18px 8px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 720px) {
+  .header {
+    display: none;
+  }
+}

@@ -1,0 +1,27 @@
+.page {
+  max-width: 1080px;
+}
+
+.title {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.lead {
+  margin: 0 0 20px;
+  color: var(--muted);
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.summary {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
